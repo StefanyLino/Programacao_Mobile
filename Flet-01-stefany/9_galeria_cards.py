@@ -44,9 +44,9 @@ def main(page: ft.Page):
         {"nome": "Besouro", "emoji": "🪲", "descricao": "Diversidade impressionante", 
          "cor": ft.Colors.GREEN_600, "categoria": "Terrestre", "tamanho": "Médio"},
         {"nome": "Grilo", "emoji": "🦗", "descricao": "Canta nas noites quentes", 
-         "cor": ft.Colors.LIME_500, "categoria": "Terrestre", "tamanho": "Médio"},
+         "cor": ft.Colors.LIME_500, "categoria": "Voador", "tamanho": "Médio"},
         {"nome": "Tarântula", "emoji": "🕷️", "descricao": "Assustadora, mas inofensiva", 
-         "cor": ft.Colors.CYAN_400, "categoria": "Voador", "tamanho": "Médio"},
+         "cor": ft.Colors.CYAN_400, "categoria": "Terrestre", "tamanho": "Médio"},
         {"nome": "Mosquito", "emoji": "🦟", "descricao": "Pequeno, mas insistente", 
          "cor": ft.Colors.GREY_500, "categoria": "Voador", "tamanho": "Pequeno"}
     ]

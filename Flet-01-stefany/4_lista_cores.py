@@ -41,7 +41,8 @@ def main(page: ft.Page):
 
         # Mudando a cor da caixa
         caixa_colorida.bgcolor = cores_disponiveis[cor_escolhida]
-        caixa_colorida.content.value = f"Cor selecionada: {cor_escolhida}"
+        caixa_colorida.content.value = f"{cor_escolhida}"
+        
 
         page.update()
     
@@ -55,9 +56,11 @@ def main(page: ft.Page):
             ft.dropdown.Option("Azul"),
             ft.dropdown.Option("Roxo"),
             ft.dropdown.Option("Laranja"),
-            ft.dropdown.Option("Rosa")
+            ft.dropdown.Option("Rosa"),
+            ft.dropdown.Option("Amarelo")
         ],
-        on_change=cor_selecionada
+        on_change=cor_selecionada, 
+
     )
 
     # Adicionando os componentes na página

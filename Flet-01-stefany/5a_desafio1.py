@@ -28,15 +28,16 @@ def main(page: ft.Page):
         on_change=lambda e: atualizar_preview()
     )
 
-    # --- Cartão de pré-visualização (sempre visível) ---
+    # --- Cartão de pré-visualização (invisível no início) ---
     cartao_preview = ft.Container(
         bgcolor=ft.Colors.WHITE,
         padding=30,
         border_radius=15,
         width=350,
+        visible=False  # <- invisível inicialmente
     )
 
-    # --- Área de aviso de erro (se precisar) ---
+    # --- Área de aviso de erro ---
     aviso = ft.Container(visible=False)
 
     # --- FilePicker ---
@@ -68,7 +69,6 @@ def main(page: ft.Page):
         try:
             i = int(campo_idade.value)
         except Exception:
-            # cor padrão para o ícone/ botão da prévia
             return None, ft.Colors.PURPLE
         if i < 18:
             return "Jovem", ft.Colors.GREEN
@@ -76,10 +76,9 @@ def main(page: ft.Page):
             return "Adulto", ft.Colors.BLUE
         return "Experiente", ft.Colors.PURPLE
 
-    def atualizar_preview():
+    def atualizar_preview(final=False):
         categoria, cor = categoria_e_cor()
 
-        # Avatar: usa imagem se houver; caso contrário, ícone (NÃO cria Image sem src!)
         if foto_usuario["path"]:
             avatar = ft.Image(
                 src=foto_usuario["path"],
@@ -105,7 +104,7 @@ def main(page: ft.Page):
                 ft.Text(idade_txt, size=14, color=ft.Colors.GREY_600),
                 ft.Text(hobby_txt, size=14, color=ft.Colors.GREY_400),
                 ft.Container(
-                    content=ft.Text("Pré-visualização ✨", color=ft.Colors.WHITE),
+                    content=ft.Text("Pré-visualização ✨" if not final else "Perfil Criado 🎉", color=ft.Colors.WHITE),
                     bgcolor=cor,
                     padding=10,
                     border_radius=20
@@ -114,7 +113,6 @@ def main(page: ft.Page):
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
             spacing=10
         )
-        aviso.visible = False
         page.update()
 
     def mostrar_erro(msg: str):
@@ -153,7 +151,11 @@ def main(page: ft.Page):
         if not foto_usuario["path"]:
             mostrar_erro("Selecione uma foto")
             return
-        # Se tudo ok, apenas um feedback suave
+
+        # Se tudo ok, mostra o cartão final
+        atualizar_preview(final=True)
+        cartao_preview.visible = True
+        aviso.visible = False
         page.snack_bar = ft.SnackBar(ft.Text("Perfil validado! ✅"))
         page.snack_bar.open = True
         page.update()
@@ -165,7 +167,9 @@ def main(page: ft.Page):
         foto_usuario["path"] = None
         botao_foto.text = "Escolher Foto"
         aviso.visible = False
+        cartao_preview.visible = False
         atualizar_preview()
+        page.update()
 
     # --- Botões principais ---
     linha_botoes = ft.Row(
@@ -181,15 +185,13 @@ def main(page: ft.Page):
     layout = ft.Column(
         [
             ft.Text("Criador de Perfil", size=26, weight=ft.FontWeight.BOLD),
-            ft.Text("Preencha seus dados para ver a pré-visualização do seu perfil!",
-                    size=14, color=ft.Colors.GREY_600, text_align=ft.TextAlign.CENTER),
             ft.Container(height=20),
             campo_nome,
             campo_idade,
             dropdown_hobby,
             botao_foto,
             ft.Container(height=10),
-            cartao_preview,   # sempre mostra a pré-visualização
+            cartao_preview,   # cartão reservado, mas invisível até criar perfil
             ft.Container(height=10),
             linha_botoes,
             ft.Container(height=10),
@@ -200,6 +202,6 @@ def main(page: ft.Page):
     )
 
     page.add(layout)
-    atualizar_preview()  # monta a prévia inicial (com ícone)
+    atualizar_preview()  # monta a prévia inicial (apenas ícone)
 
 ft.app(target=main)

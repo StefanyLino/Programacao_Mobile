@@ -19,6 +19,8 @@ def main(page: ft.Page):
         # Mudando o texto da mensagem
         mensagem.value = "Parabéns! Você clicou no botão."
         mensagem.color = ft.Colors.GREEN
+        meu_botao.bgcolor = ft.Colors.LIGHT_GREEN_100
+        meu_botao.color = ft.Colors.BLACK
 
         # IMPORTANTE: Sempre que modificamos elementos da interface,
         # precisamos chamar o método update() para que as mudanças apareçam na tela.

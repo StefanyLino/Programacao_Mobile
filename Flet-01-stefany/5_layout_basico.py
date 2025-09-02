@@ -16,10 +16,11 @@ def main(page: ft.Page):
 
     # Criando uma linha horizontal com 3 botões
     linha_botoes = ft.Row(
+        # Controls é um vetor que permite editar informações específicas
         controls=[
             ft.ElevatedButton(text="Botão 1", bgcolor=ft.Colors.BLUE, color=ft.Colors.WHITE),
             ft.ElevatedButton(text="Botão 2", bgcolor=ft.Colors.GREEN, color=ft.Colors.WHITE),
-            ft.ElevatedButton(text="Botão 3", bgcolor=ft.Colors.RED, color=ft.Colors.WHITE),
+            ft.ElevatedButton(text="Botão 3", bgcolor=ft.Colors.RED, color=ft.Colors.WHITE)
         ],
         alignment=ft.MainAxisAlignment.CENTER,
         spacing=20
