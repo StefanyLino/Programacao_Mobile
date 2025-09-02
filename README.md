@@ -123,6 +123,23 @@ flet run --web nomeprojeto.py
 
 > Projeto de loja de mangás, com fotos, textos, filtros de pesquisa e carrinho.
 
+11. Calculadora de IMC
+> Aplicação em Python + Flet para calcular o Índice de Massa Corporal (IMC).
+
+#### Funcionalidades:
+- Inserir peso e altura para calcular IMC.
+- Mostrar resultado com classificação (abaixo do peso, normal, sobrepeso, obesidade).
+- Botões Calcular e Limpar.
+- Alternância entre tema claro e escuro.
+<img width="959" height="436" alt="image" src="https://github.com/user-attachments/assets/31cb98f0-415b-4138-8484-691d3aa54a1d" /><br>
+> TEMA CLARO
+<img width="959" height="434" alt="image" src="https://github.com/user-attachments/assets/e444bb17-51e1-4cd0-89b6-9023a3c9cc83" /><br>
+> TEMA ESCURO
+
+
+​
+
+
 
 
 
