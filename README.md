@@ -38,10 +38,7 @@ Python é uma **linguagem de programação de alto nível, interpretada, orienta
 
 ```bash
 python -m venv .venv
-# Windows
 .venv\Scripts\activate
-# macOS / Linux
-source .venv/bin/activate
 ```
 
 3. **Instalar o Flet (desktop)**:
@@ -58,23 +55,9 @@ pip show flet
 # Executar em modo web (abre no navegador)
 flet run --web nomeprojeto.py
 
-# Executar para abrir no app desktop (se disponível)
-flet run nomeprojeto.py
 ```
 
 > Observação: substitua `nomeprojeto.py` pelo nome do arquivo Python do seu projeto.
 
 ---
-
-## Exemplo mínimo (arquivo `nomeprojeto.py`)
-
-```python
-import flet as ft
-
-def main(page: ft.Page):
-    page.title = "Meu App Flet"
-    page.add(ft.Text("Olá, Flet!"))
-
-ft.app(target=main)
-```
 
