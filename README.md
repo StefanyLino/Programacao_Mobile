@@ -38,10 +38,7 @@ Python é uma **linguagem de programação de alto nível, interpretada, orienta
 
 ```bash
 python -m venv .venv
-# Windows
 .venv\Scripts\activate
-# macOS / Linux
-source .venv/bin/activate
 ```
 
 3. **Instalar o Flet (desktop)**:
@@ -58,23 +55,77 @@ pip show flet
 # Executar em modo web (abre no navegador)
 flet run --web nomeprojeto.py
 
-# Executar para abrir no app desktop (se disponível)
-flet run nomeprojeto.py
 ```
 
 > Observação: substitua `nomeprojeto.py` pelo nome do arquivo Python do seu projeto.
 
----
 
-## Exemplo mínimo (arquivo `nomeprojeto.py`)
+## ATIVIDADES
 
-```python
-import flet as ft
+1. HELLO WORLD
+<img width="959" height="506" alt="1" src="https://github.com/user-attachments/assets/3708feca-3a26-480f-af9b-cea7de5d4387" />
 
-def main(page: ft.Page):
-    page.title = "Meu App Flet"
-    page.add(ft.Text("Olá, Flet!"))
+> Projeto de teste com textos, cores e alinhamentos.
 
-ft.app(target=main)
-```
+2. BOTÃO SIMPLES
+<img width="381" height="502" alt="2 1" src="https://github.com/user-attachments/assets/c83cbc31-6c24-401d-89f1-bbb81b60921f" />
+
+> Projeto com botão, ao clicá-lo, se há mudança de cores.
+
+3. CAMPO DE TEXTO
+<img width="376" height="502" alt="3 1" src="https://github.com/user-attachments/assets/e6ca3e6b-7809-45d8-8edb-cd7098978d10" />
+
+> Projeto com campo de texto e botão, após digitar informações e clicar no botão um gif aparece.
+
+4. SELETOR DE CORES
+<img width="382" height="505" alt="4 1" src="https://github.com/user-attachments/assets/c7938109-80be-43a1-8d0d-9b234561cd09" />
+
+> Projeto com seletor de cores que muda a aparência do botão conforme a cor selecionada.
+
+5. LAYOUT
+<img width="959" height="503" alt="5" src="https://github.com/user-attachments/assets/8f276e0c-5490-47a3-8a57-c79868e08dc5" />
+
+> Projeto com layout de elementos inseridos.
+
+5A. DESAFIO
+
+<img width="335" height="497" alt="5a 3" src="https://github.com/user-attachments/assets/36be5f99-e639-4a50-9e38-fb7a4173bf4d" />
+
+> Projeto de desafio onde se há a criação de um perfil, com nome, idade, hobbies e inserção de fotos.
+
+6. CONTADOR
+<img width="353" height="499" alt="6 1" src="https://github.com/user-attachments/assets/a0229d1d-9d5c-4fb1-9250-64d3dd03da6b" />
+
+> Projeto de contador, a partir do clique dos botões mostra números positivos e negativos.
+
+7. CALCULADORA
+<img width="362" height="503" alt="7 1" src="https://github.com/user-attachments/assets/f3658be1-ff19-4b91-b5df-24c1dd297adf" />
+
+> Projeto de calculadora básica com as 4 principais operações.
+
+8. PAINEL DE CONFIGURAÇÕES
+<img width="335" height="497" alt="8 1" src="https://github.com/user-attachments/assets/39d5f3ac-a894-404f-b486-9063fe970413" />
+
+> Projeto de painel de configurações com alteração de estilo, cores e tamanho de texto.
+
+9. INSECTÁRIO VIRTUAL
+<img width="327" height="503" alt="9 1" src="https://github.com/user-attachments/assets/79f2652e-f3e6-4d34-9412-53b5f2ac7b22" />
+
+> Projeto de mostra de insectário com filtros de pesquisa e descrição de cards.
+
+10. MEU APP
+<img width="286" height="468" alt="10 1" src="https://github.com/user-attachments/assets/91fe79f9-e9d0-4d78-933d-039966141ede" />
+
+> Projeto de aplicação básica com abas diferentes.
+
+10a. DESAFIO<br>
+<img width="317" height="501" alt="10a 1" src="https://github.com/user-attachments/assets/5ef34e25-8090-4097-866f-b5b67a27f44b" />
+
+> Projeto de loja de mangás, com fotos, textos, filtros de pesquisa e carrinho.
+
+
+
+
+
+
 
